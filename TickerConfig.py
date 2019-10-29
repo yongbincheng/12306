@@ -4,11 +4,11 @@
 # 如果这个时候捡漏捡到的话，也是可以付款成功的，也就是说，捡漏+候补，可以最大程度提升抢票成功率
 
 # 刷票模式：1=刷票 2=候补+刷票
-TICKET_TYPE = 2
+TICKET_TYPE = 1
 
 # 出发日期(list) "2018-01-06", "2018-01-07"
 STATION_DATES = [
-    "2019-10-25"
+    "2019-10-29"
 ]
 
 # 填入需要购买的车次(list)，"G1353"
@@ -17,10 +17,10 @@ STATION_DATES = [
 STATION_TRAINS = []
 
 # 出发城市，比如深圳北，就填深圳就搜得到
-FROM_STATION = "深圳北"
+FROM_STATION = "北京西"
 
 # 到达城市 比如深圳北，就填深圳就搜得到
-TO_STATION = "长沙南"
+TO_STATION = "石家庄"
 
 # 座位(list) 多个座位ex:
 # "商务座",
@@ -32,7 +32,9 @@ TO_STATION = "长沙南"
 # "硬座",
 # "无座",
 # "动卧",
-SET_TYPE = []
+SET_TYPE = [
+    "二等座",
+]
 
 # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
 # bool
@@ -41,11 +43,13 @@ IS_MORE_TICKET = True
 # 乘车人(list) 多个乘车人ex:
 # "张三",
 # "李四"
-TICKET_PEOPLES = []
+TICKET_PEOPLES = [
+    "成永彬"
+]
 
 # 12306登录账号
-USER = ""
-PWD = ""
+USER = "13810410526"
+PWD = "LANMEI521"
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 TICKET_BLACK_LIST_TIME = 5
@@ -79,7 +83,7 @@ HTTP_TYPE = "http"
 #  password: "授权码"
 #  host: "smtp.qq.com"
 EMAIL_CONF = {
-    "IS_MAIL": True,
+    "IS_MAIL": False,
     "email": "",
     "notice_email_list": "",
     "username": "",
@@ -89,8 +93,8 @@ EMAIL_CONF = {
 
 # 是否开启 server酱 微信提醒， 使用前需要前往 http://sc.ftqq.com/3.version 扫码绑定获取 SECRET 并关注获得抢票结果通知的公众号
 SERVER_CHAN_CONF = {
-    "is_server_chan": False,
-    "secret": ""
+    "is_server_chan": True,
+    "secret": "SCU63388T03e23cd2615d2e02abd41f7dc19ace355d9607f173012"
 }
 
 # 是否开启cdn查询，可以更快的检测票票 1为开启，2为关闭
@@ -119,7 +123,7 @@ OPEN_TIME = "13:00:00"
 COOKIE_TYPE = 1
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
-CHROME_PATH = "/Users/wenxianping/Downloads/chromedriver"
+CHROME_PATH = "D:\Program Files (x86)\chromedriver\chromedriver.exe"
 
 # 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
 RAIL_EXPIRATION = ""
